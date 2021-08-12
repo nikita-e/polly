@@ -1,0 +1,16 @@
+{
+  "name": "polly",
+  "version": "1.0.0",
+  "description": "Simple poll bot",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord.js": "^13.1.0-dev.1628424171.47d2ef3",
+    "mongoose": "^5.13.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita E.",
+  "license": "ISC"
+}
