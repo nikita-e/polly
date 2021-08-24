@@ -13,6 +13,4 @@
 4. Invite the bot. You can get link from logs.
 
 ## Updating Polly
-Open a terminal and run:
-1. `git fetch remote`
-2. `git merge remote/master`
+Open a terminal, navigate to installation directory and run: `git fetch origin && git merge origin`
