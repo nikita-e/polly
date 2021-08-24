@@ -29,7 +29,7 @@ module.exports = {
                 };
 
                 // Send message to first channel.
-                const channel = guild.channels.cache.find(channel => channel.type === 'GUILD_TEXT' && channel.permissionsFor(guild.me).has('SEND_MESSAGES'));
+                const channel = guild.channels.cache.find(channel => channel.type === 'GUILD_TEXT' && channel.permissionsFor(guild.me).has(['VIEW_CHANNEL', 'SEND_MESSAGES']));
                 if (channel) channel.send({
                     embeds: [
                         new MessageEmbed()

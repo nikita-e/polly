@@ -1,5 +1,4 @@
 const fs = require('fs');
-const readline = require('readline');
 const mongo = require('../modules/mongo');
 const settingsModel = require('../models/settings');
 const pollModel = require('../models/poll');
@@ -73,8 +72,8 @@ module.exports = {
 			]
 		});
 
-		console.log(`${client.user.tag} has logged in.`);
-		let link = client.generateInvite({
+		// Generate invite.
+		client.invite = client.generateInvite({
 			scopes: ['bot'],
 			permissions: [
 				'VIEW_CHANNEL', 
@@ -85,6 +84,13 @@ module.exports = {
 				'MENTION_EVERYONE'
 			]
 		});
-		console.log(`Invite bot: ${link}`);
+		console.log(`${client.user.tag} has logged in. ${client.invite}`);
+
+		// Log out if script has been interrupted.
+		process.on('SIGINT', async () => {
+			console.log('Shutting down...');
+			await client.destroy();
+			process.exit(0);
+		});
 	},
 };
