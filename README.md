@@ -1,7 +1,7 @@
 # Polly - simple Discord poll bot
 ## Requirements
 * Git
-* MongoDB database
+* MongoDB server
 * NodeJS v16 or higher
 * PM2
 * Discord bot account
